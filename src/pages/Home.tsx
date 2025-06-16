@@ -97,7 +97,12 @@ export default function Home() {
           {displayFoods.map((food) => (
             <FoodCard
               key={food.id}
-              food={food}
+              id={food.id}
+              name={food.name}
+              image={food.image}
+              rating={food.rating}
+              description={food.description}
+              restaurant={food.restaurant}
               variant="grid"
               onClick={() => navigate(`/food/${food.id}`)}
             />
