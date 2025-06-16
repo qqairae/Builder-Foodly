@@ -3,7 +3,7 @@ import { Star } from "lucide-react";
 import { cn } from "../lib/utils";
 
 interface StarRatingProps {
-  rating: number;
+  rating?: number;
   maxRating?: number;
   size?: "sm" | "md" | "lg";
   className?: string;
@@ -21,6 +21,9 @@ export const StarRating: React.FC<StarRatingProps> = ({
     lg: "w-5 h-5",
   };
 
+  // Handle undefined or null rating
+  const safeRating = rating || 0;
+
   return (
     <div className={cn("flex items-center gap-1", className)}>
       {[...Array(maxRating)].map((_, index) => (
@@ -28,14 +31,14 @@ export const StarRating: React.FC<StarRatingProps> = ({
           key={index}
           className={cn(
             sizeClasses[size],
-            index < Math.floor(rating)
+            index < Math.floor(safeRating)
               ? "fill-yellow-400 text-yellow-400"
               : "text-gray-300",
           )}
         />
       ))}
       <span className="text-sm font-medium text-gray-700 ml-1">
-        {rating.toFixed(1)}
+        {safeRating.toFixed(1)}
       </span>
     </div>
   );
@@ -45,7 +48,7 @@ interface FoodCardProps {
   id: string;
   name: string;
   image: string;
-  rating: number;
+  rating?: number;
   description?: string;
   restaurant?: string;
   onClick?: () => void;
