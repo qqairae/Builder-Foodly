@@ -26,14 +26,12 @@ export default function Profile() {
     {
       title: "Settings",
       onClick: () => {
-        // Navigate to settings page (not implemented)
         console.log("Settings clicked");
       },
     },
     {
       title: "Help",
       onClick: () => {
-        // Navigate to help page (not implemented)
         console.log("Help clicked");
       },
     },
@@ -48,7 +46,7 @@ export default function Profile() {
             <ChevronLeft className="h-6 w-6" />
           </Button>
           <h1 className="text-lg font-semibold">My profile</h1>
-          <div className="w-10" /> {/* Spacer */}
+          <div className="w-10"></div>
         </div>
       </div>
 
