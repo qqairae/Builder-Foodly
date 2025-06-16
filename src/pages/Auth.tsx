@@ -7,7 +7,7 @@ import { Label } from "../components/ui/label";
 import { useAuth } from "../contexts/AuthContext";
 import { cn } from "../lib/utils";
 
-export const Auth: React.FC = () => {
+const Auth: React.FC = () => {
   const [activeTab, setActiveTab] = useState<"login" | "signup">("login");
   const [email, setEmail] = useState("Dosamarvis@gmail.com");
   const [username, setUsername] = useState("Dosamarvis02");
@@ -164,3 +164,5 @@ export const Auth: React.FC = () => {
     </div>
   );
 };
+
+export default Auth;
