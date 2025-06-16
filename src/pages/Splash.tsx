@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FoodlyLogo, FoodPlate } from "../components/FoodlyLogo";
 import { Button } from "../components/ui/button";
 
-export const Splash: React.FC = () => {
+const Splash: React.FC = () => {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
@@ -47,3 +47,5 @@ export const Splash: React.FC = () => {
     </div>
   );
 };
+
+export default Splash;
