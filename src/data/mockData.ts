@@ -5,11 +5,9 @@ export interface FoodItem {
   rating: number;
   description: string;
   category: string;
-  restaurant?: {
-    name: string;
-    location: string;
-    hours: string;
-  };
+  restaurant: string;
+  location?: string;
+  hours?: string;
 }
 
 export interface UserPreferences {
@@ -22,6 +20,7 @@ export interface HistoryItem {
   name: string;
   image: string;
   date: string;
+  restaurant: string;
 }
 
 export const foodItems: FoodItem[] = [
@@ -33,11 +32,9 @@ export const foodItems: FoodItem[] = [
     rating: 4.5,
     description: "Fresh vegetables with tomato",
     category: "Vegetarian",
-    restaurant: {
-      name: "Corner Hub",
-      location: "Kota Warisan",
-      hours: "10am - 10pm",
-    },
+    restaurant: "Corner Hub",
+    location: "Kota Warisan",
+    hours: "10am - 10pm",
   },
   {
     id: "2",
@@ -47,11 +44,9 @@ export const foodItems: FoodItem[] = [
     rating: 4.2,
     description: "Spicy fish with special sauce",
     category: "Seafood",
-    restaurant: {
-      name: "Ocean Delight",
-      location: "Kota Warisan",
-      hours: "11am - 9pm",
-    },
+    restaurant: "Ocean Delight",
+    location: "Kota Warisan",
+    hours: "11am - 9pm",
   },
   {
     id: "3",
@@ -61,11 +56,9 @@ export const foodItems: FoodItem[] = [
     rating: 3.2,
     description: "Fried chicken tomyam",
     category: "Thai",
-    restaurant: {
-      name: "Kawanku Restaurant",
-      location: "Kota Warisan",
-      hours: "12pm - 11pm",
-    },
+    restaurant: "Kawanku Restaurant",
+    location: "Kota Warisan",
+    hours: "12pm - 11pm",
   },
   {
     id: "4",
@@ -73,13 +66,11 @@ export const foodItems: FoodItem[] = [
     image:
       "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400&h=400&fit=crop&crop=center",
     rating: 5.5,
-    description: "Egg and cucumber nasi lemak",
+    description: "Egg and cucumber",
     category: "Malaysian",
-    restaurant: {
-      name: "Nasi Lemak Corner",
-      location: "Kota Warisan",
-      hours: "7am - 3pm",
-    },
+    restaurant: "Nasi Lemak Spot",
+    location: "Kota Warisan",
+    hours: "7am - 3pm",
   },
   {
     id: "5",
@@ -89,11 +80,9 @@ export const foodItems: FoodItem[] = [
     rating: 6.4,
     description: "Nasi Lemak and fried chicken",
     category: "Malaysian",
-    restaurant: {
-      name: "Viral Food House",
-      location: "Kota Warisan",
-      hours: "8am - 4pm",
-    },
+    restaurant: "Nasi Lemak Viral",
+    location: "Kota Warisan",
+    hours: "8am - 4pm",
   },
   {
     id: "6",
@@ -102,12 +91,10 @@ export const foodItems: FoodItem[] = [
       "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=400&fit=crop&crop=center",
     rating: 4.8,
     description: "Juicy grilled burger with fries",
-    category: "Western",
-    restaurant: {
-      name: "Burger Junction",
-      location: "Kota Warisan",
-      hours: "11am - 10pm",
-    },
+    category: "Burgers",
+    restaurant: "Burger Junction",
+    location: "Kota Warisan",
+    hours: "11am - 10pm",
   },
 ];
 
@@ -118,6 +105,7 @@ export const historyItems: HistoryItem[] = [
     image:
       "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=400&fit=crop&crop=center",
     date: "April 2021",
+    restaurant: "Corner Hub",
   },
   {
     id: "2",
@@ -125,6 +113,7 @@ export const historyItems: HistoryItem[] = [
     image:
       "https://images.unsplash.com/photo-1551326844-4df70f78d0e9?w=400&h=400&fit=crop&crop=center",
     date: "April 2021",
+    restaurant: "Ocean Delight",
   },
 ];
 
