@@ -97,10 +97,10 @@ export default function Preferences() {
         </div>
 
         {/* Save Button */}
-        <div className="mt-8">
+        <div className="mt-8 flex justify-center">
           <Button
             onClick={handleSave}
-            className="w-full bg-white text-foodly-orange hover:bg-white/90 font-semibold py-3 px-8 rounded-lg text-lg border border-gray-200"
+            className="bg-white text-foodly-orange hover:bg-white/90 font-semibold py-3 px-12 rounded-full text-lg"
           >
             Save
           </Button>
