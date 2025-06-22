@@ -18,36 +18,36 @@ export const FoodlyLogo: React.FC<FoodlyLogoProps> = ({
   return (
     <div className={`${sizeClasses[size]} ${className}`}>
       <svg
-        viewBox="0 0 64 64"
+        viewBox="0 0 64 80"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="w-full h-full"
       >
-        {/* Chef hat main body - taller and more traditional */}
+        {/* Chef hat main body - much taller and more traditional */}
         <path
-          d="M32 6C22 6 16 12 16 18C10 18 6 22 6 28C6 34 10 38 16 38H48C54 38 58 34 58 28C58 22 54 18 48 18C48 12 42 6 32 6Z"
+          d="M32 2C20 2 12 8 12 16C6 16 2 20 2 26C2 32 6 36 12 36H52C58 36 62 32 62 26C62 20 58 16 52 16C52 8 44 2 32 2Z"
           fill="white"
           stroke="#FF5722"
           strokeWidth="2"
         />
 
-        {/* Chef hat pleats for authentic look */}
+        {/* Chef hat pleats for authentic look - extended for taller hat */}
         <path
-          d="M20 35C22 30 24 25 26 20"
+          d="M18 34C20 28 22 20 24 12"
           stroke="#FF5722"
           strokeWidth="1"
           fill="none"
           opacity="0.6"
         />
         <path
-          d="M32 35C32 30 32 25 32 18"
+          d="M32 34C32 28 32 20 32 8"
           stroke="#FF5722"
           strokeWidth="1"
           fill="none"
           opacity="0.6"
         />
         <path
-          d="M44 35C42 30 40 25 38 20"
+          d="M46 34C44 28 42 20 40 12"
           stroke="#FF5722"
           strokeWidth="1"
           fill="none"
@@ -56,18 +56,18 @@ export const FoodlyLogo: React.FC<FoodlyLogoProps> = ({
 
         {/* Chef hat band - wider and more prominent */}
         <rect
-          x="16"
-          y="36"
-          width="32"
-          height="6"
+          x="12"
+          y="34"
+          width="40"
+          height="8"
           fill="white"
           stroke="#FF5722"
           strokeWidth="2"
-          rx="1"
+          rx="2"
         />
 
-        {/* Hat base */}
-        <ellipse cx="32" cy="44" rx="18" ry="4" fill="#FF5722" opacity="0.1" />
+        {/* Hat base shadow */}
+        <ellipse cx="32" cy="44" rx="22" ry="4" fill="#FF5722" opacity="0.1" />
       </svg>
     </div>
   );
