@@ -115,13 +115,14 @@ export const FoodPlate: React.FC<FoodPlateProps> = ({
         {/* Yellow section */}
         <path d="M54 64 L74 64 L74 84 L54 84 Z" fill="#FFC107" rx="4" />
 
+        {/* Fork and Spoon in same position */}
         {/* Fork */}
         <rect x="15" y="30" width="2" height="20" fill="#666" />
         <rect x="12" y="28" width="8" height="2" fill="#666" />
 
-        {/* Knife */}
-        <rect x="85" y="30" width="2" height="20" fill="#666" />
-        <path d="M84 28 L88 28 L87 26 L85 26 Z" fill="#666" />
+        {/* Spoon (in same position as fork) */}
+        <rect x="15" y="30" width="2" height="20" fill="#666" />
+        <ellipse cx="16" cy="28" rx="4" ry="2" fill="#666" />
       </svg>
     </div>
   );
