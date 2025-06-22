@@ -45,7 +45,7 @@ export default function Preferences() {
       <div className="w-full max-w-sm">
         {/* Header */}
         <div className="flex items-center justify-center mb-8">
-          <FoodlyLogo size="md" className="mr-3" />
+          <FoodlyLogo size="md" className="mr-4" />
           <h1 className="text-white text-4xl font-bold">Foodly</h1>
         </div>
 
