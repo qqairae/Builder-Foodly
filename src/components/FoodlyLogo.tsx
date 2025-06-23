@@ -23,51 +23,98 @@ export const FoodlyLogo: React.FC<FoodlyLogoProps> = ({
         xmlns="http://www.w3.org/2000/svg"
         className="w-full h-full"
       >
-        {/* Chef hat main body - much taller and more traditional */}
+        {/* Cute puffy chef hat with sparkles */}
         <path
-          d="M32 2C20 2 12 8 12 16C6 16 2 20 2 26C2 32 6 36 12 36H52C58 36 62 32 62 26C62 20 58 16 52 16C52 8 44 2 32 2Z"
+          d="M32 2C18 2 8 10 8 20C4 20 0 24 0 30C0 36 4 40 8 40H56C60 40 64 36 64 30C64 24 60 20 56 20C56 10 46 2 32 2Z"
           fill="white"
           stroke="#FF5722"
-          strokeWidth="2"
+          strokeWidth="2.5"
         />
 
-        {/* Chef hat pleats for authentic look - extended for taller hat */}
-        <path
-          d="M18 34C20 28 22 20 24 12"
+        {/* Cute puffy sections on hat */}
+        <circle
+          cx="20"
+          cy="18"
+          r="4"
+          fill="white"
           stroke="#FF5722"
-          strokeWidth="1"
-          fill="none"
-          opacity="0.6"
+          strokeWidth="1.5"
+          opacity="0.8"
         />
-        <path
-          d="M32 34C32 28 32 20 32 8"
+        <circle
+          cx="32"
+          cy="12"
+          r="5"
+          fill="white"
           stroke="#FF5722"
-          strokeWidth="1"
-          fill="none"
-          opacity="0.6"
+          strokeWidth="1.5"
+          opacity="0.8"
         />
-        <path
-          d="M46 34C44 28 42 20 40 12"
+        <circle
+          cx="44"
+          cy="18"
+          r="4"
+          fill="white"
           stroke="#FF5722"
-          strokeWidth="1"
-          fill="none"
-          opacity="0.6"
+          strokeWidth="1.5"
+          opacity="0.8"
         />
 
-        {/* Chef hat band - wider and more prominent */}
+        {/* Sparkles on hat */}
+        <path d="M24 8 L26 10 L24 12 L22 10 Z" fill="#FFD700" />
+        <path d="M40 6 L42 8 L40 10 L38 8 Z" fill="#FFD700" />
+        <circle cx="50" cy="14" r="1" fill="#FFD700" />
+
+        {/* Chef hat band with cute pattern */}
         <rect
-          x="12"
-          y="34"
-          width="40"
-          height="8"
+          x="8"
+          y="38"
+          width="48"
+          height="10"
           fill="white"
           stroke="#FF5722"
           strokeWidth="2"
-          rx="2"
+          rx="5"
+        />
+        <circle cx="18" cy="43" r="2" fill="#FF5722" opacity="0.3" />
+        <circle cx="32" cy="43" r="2" fill="#FF5722" opacity="0.3" />
+        <circle cx="46" cy="43" r="2" fill="#FF5722" opacity="0.3" />
+
+        {/* Adorable face */}
+        <circle
+          cx="32"
+          cy="60"
+          r="16"
+          fill="#FFF8E1"
+          stroke="#FF5722"
+          strokeWidth="2"
         />
 
-        {/* Hat base shadow */}
-        <ellipse cx="32" cy="44" rx="22" ry="4" fill="#FF5722" opacity="0.1" />
+        {/* Rosy cheeks */}
+        <circle cx="24" cy="62" r="3" fill="#FFB3BA" opacity="0.6" />
+        <circle cx="40" cy="62" r="3" fill="#FFB3BA" opacity="0.6" />
+
+        {/* Sparkling eyes */}
+        <circle cx="27" cy="56" r="3" fill="#333" />
+        <circle cx="37" cy="56" r="3" fill="#333" />
+        <circle cx="28" cy="55" r="1" fill="white" />
+        <circle cx="38" cy="55" r="1" fill="white" />
+
+        {/* Cute smile */}
+        <path
+          d="M24 66C26 68 28 69 32 69C36 69 38 68 40 66"
+          stroke="#FF5722"
+          strokeWidth="2.5"
+          fill="none"
+          strokeLinecap="round"
+        />
+
+        {/* Heart on cheek */}
+        <path
+          d="M42 58 C43 57 45 57 45 59 C45 57 47 57 48 58 C47 60 45 62 45 62 C45 62 43 60 42 58 Z"
+          fill="#FF69B4"
+          opacity="0.7"
+        />
       </svg>
     </div>
   );
