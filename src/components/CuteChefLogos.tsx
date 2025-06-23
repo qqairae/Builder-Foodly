@@ -11,9 +11,9 @@ export const SplashChef: React.FC<ChefLogoProps> = ({
   className = "",
 }) => {
   const sizeClasses = {
-    sm: "w-12 h-12",
-    md: "w-16 h-16",
-    lg: "w-24 h-24",
+    sm: "w-10 h-10",
+    md: "w-14 h-14",
+    lg: "w-20 h-20",
   };
 
   return (
@@ -55,9 +55,9 @@ export const AuthChef: React.FC<ChefLogoProps> = ({
   className = "",
 }) => {
   const sizeClasses = {
-    sm: "w-12 h-12",
-    md: "w-16 h-16",
-    lg: "w-24 h-24",
+    sm: "w-10 h-10",
+    md: "w-14 h-14",
+    lg: "w-20 h-20",
   };
 
   return (
@@ -110,9 +110,9 @@ export const PreferencesChef: React.FC<ChefLogoProps> = ({
   className = "",
 }) => {
   const sizeClasses = {
-    sm: "w-12 h-12",
-    md: "w-16 h-16",
-    lg: "w-24 h-24",
+    sm: "w-10 h-10",
+    md: "w-14 h-14",
+    lg: "w-20 h-20",
   };
 
   return (
