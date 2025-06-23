@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FoodlyLogo } from "../components/FoodlyLogo";
+import { AuthChef } from "../components/CuteChefLogos";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Label } from "../components/ui/label";
@@ -46,7 +46,7 @@ const Auth: React.FC = () => {
         {/* Logo */}
         <div className="flex justify-center mb-8">
           <div className="flex flex-col items-center">
-            <FoodlyLogo size="lg" />
+            <AuthChef size="lg" />
             <div className="w-4 h-3 bg-foodly-red rounded-full mt-2"></div>
           </div>
         </div>

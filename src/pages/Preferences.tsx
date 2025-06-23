@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { FoodlyLogo } from "@/components/FoodlyLogo";
+import { PreferencesChef } from "@/components/CuteChefLogos";
 import { usePreferences } from "@/contexts/PreferencesContext";
 import { foodCategories, dislikedIngredients } from "@/data/mockData";
 
@@ -45,7 +45,7 @@ export default function Preferences() {
       <div className="w-full max-w-sm">
         {/* Header */}
         <div className="flex items-center justify-center mb-8">
-          <FoodlyLogo size="md" className="mr-4" />
+          <PreferencesChef size="md" className="mr-4" />
           <h1
             className="text-white text-4xl font-bold"
             style={{

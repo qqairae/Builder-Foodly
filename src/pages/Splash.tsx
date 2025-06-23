@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { FoodlyLogo, FoodPlate } from "../components/FoodlyLogo";
+import { FoodPlate } from "../components/FoodlyLogo";
+import { SplashChef } from "../components/CuteChefLogos";
 import { Button } from "../components/ui/button";
 
 const Splash: React.FC = () => {
@@ -16,7 +17,7 @@ const Splash: React.FC = () => {
         <div className="bg-foodly-orange rounded-3xl p-8 shadow-2xl">
           {/* Top Logo */}
           <div className="flex justify-center mb-8">
-            <FoodlyLogo size="lg" className="text-white" />
+            <SplashChef size="lg" className="text-white" />
           </div>
 
           {/* Title */}
