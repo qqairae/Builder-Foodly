@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { PreferencesChef } from "@/components/CuteChefLogos";
+import { SplashChef } from "@/components/CuteChefLogos";
 import { usePreferences } from "@/contexts/PreferencesContext";
 import { foodCategories, dislikedIngredients } from "@/data/mockData";
 
@@ -45,7 +45,7 @@ export default function Preferences() {
       <div className="w-full max-w-sm">
         {/* Header */}
         <div className="flex flex-col items-center mb-8">
-          <PreferencesChef size="lg" className="mb-4" />
+          <SplashChef size="lg" className="mb-4" />
           <h1
             className="text-white text-4xl font-bold"
             style={{
