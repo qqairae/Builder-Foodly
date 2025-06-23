@@ -46,7 +46,16 @@ export default function Preferences() {
         {/* Header */}
         <div className="flex items-center justify-center mb-8">
           <FoodlyLogo size="md" className="mr-4" />
-          <h1 className="text-white text-4xl font-bold">Foodly</h1>
+          <h1
+            className="text-white text-4xl font-bold"
+            style={{
+              fontFamily: "Comic Sans MS, cursive, system-ui",
+              letterSpacing: "2px",
+              textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+            }}
+          >
+            Foodly
+          </h1>
         </div>
 
         {/* Preferences Title */}
@@ -56,16 +65,18 @@ export default function Preferences() {
 
         {/* Type of Food Section */}
         <div className="mb-8">
-          <h3 className="text-white text-lg font-medium mb-4">Type of Food</h3>
-          <div className="flex flex-wrap gap-3">
+          <h3 className="text-white text-xl font-medium mb-6 text-center">
+            Type of Food
+          </h3>
+          <div className="flex flex-wrap gap-3 justify-center">
             {foodCategories.map((category) => (
               <button
                 key={category}
                 onClick={() => toggleFoodType(category)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
+                className={`px-6 py-3 rounded-full text-sm font-medium transition-colors ${
                   selectedFoodTypes.includes(category)
-                    ? "bg-white text-foodly-orange"
-                    : "bg-white/20 text-white border border-white/30"
+                    ? "bg-white text-foodly-orange shadow-lg"
+                    : "bg-white/20 text-white border border-white/30 hover:bg-white/30"
                 }`}
               >
                 {category}
@@ -76,18 +87,18 @@ export default function Preferences() {
 
         {/* Dislike Ingredients Section */}
         <div className="mb-12">
-          <h3 className="text-white text-lg font-medium mb-4">
+          <h3 className="text-white text-xl font-medium mb-6 text-center">
             Dislike Ingredients
           </h3>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 justify-center">
             {dislikedIngredients.map((ingredient) => (
               <button
                 key={ingredient}
                 onClick={() => toggleDislike(ingredient)}
-                className={`px-6 py-2 rounded-full text-sm font-medium transition-colors ${
+                className={`px-6 py-3 rounded-full text-sm font-medium transition-colors ${
                   selectedDislikes.includes(ingredient)
-                    ? "bg-white text-foodly-orange"
-                    : "bg-white/20 text-white border border-white/30"
+                    ? "bg-white text-foodly-orange shadow-lg"
+                    : "bg-white/20 text-white border border-white/30 hover:bg-white/30"
                 }`}
               >
                 {ingredient}

@@ -21,7 +21,16 @@ const Splash: React.FC = () => {
 
           {/* Title */}
           <div className="text-center mb-4">
-            <h1 className="text-5xl font-bold text-white mb-2">Foodly</h1>
+            <h1
+              className="text-5xl font-bold text-white mb-2"
+              style={{
+                fontFamily: "Comic Sans MS, cursive, system-ui",
+                letterSpacing: "2px",
+                textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+              }}
+            >
+              Foodly
+            </h1>
             <p className="text-white/90 text-lg font-medium">
               Find your food with Food Smart
             </p>

@@ -123,6 +123,12 @@ export const foodCategories = [
   "Noodles",
   "Rice",
   "Burgers",
+  "Pizza",
+  "Sushi",
+  "Mexican",
+  "Thai",
+  "Indian",
+  "Desserts",
 ];
 
 export const dislikedIngredients = [
@@ -130,4 +136,10 @@ export const dislikedIngredients = [
   "Onions",
   "Seafood",
   "Peanuts",
+  "Dairy",
+  "Gluten",
+  "Spicy",
+  "Mushrooms",
+  "Coconut",
+  "Eggs",
 ];
