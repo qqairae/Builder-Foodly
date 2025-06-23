@@ -5,7 +5,7 @@ interface ChefLogoProps {
   className?: string;
 }
 
-// Beautiful Chef Hat for Splash Screen
+// Flat Design Chef Hat - Clean and Modern
 export const SplashChef: React.FC<ChefLogoProps> = ({
   size = "md",
   className = "",
@@ -24,72 +24,32 @@ export const SplashChef: React.FC<ChefLogoProps> = ({
         xmlns="http://www.w3.org/2000/svg"
         className="w-full h-full"
       >
-        <defs>
-          <linearGradient id="hatGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#ffffff" />
-            <stop offset="100%" stopColor="#f5f5f5" />
-          </linearGradient>
-          <linearGradient id="bandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#ffffff" />
-            <stop offset="100%" stopColor="#e0e0e0" />
-          </linearGradient>
-        </defs>
-
-        {/* Main chef hat with beautiful curves */}
+        {/* Simple flat chef hat */}
         <path
-          d="M32 6C22 6 15 11 15 18C11 18 8 21 8 26C8 31 11 34 15 34C17 36 20 37 24 37H40C44 37 47 36 49 34C53 34 56 31 56 26C56 21 53 18 49 18C49 11 42 6 32 6Z"
-          fill="url(#hatGradient)"
+          d="M32 8C24 8 18 12 18 18C15 18 12 21 12 26C12 31 15 34 18 34H46C49 34 52 31 52 26C52 21 49 18 46 18C46 12 40 8 32 8Z"
+          fill="white"
           stroke="#FF5722"
-          strokeWidth="2"
+          strokeWidth="3"
           strokeLinejoin="round"
         />
 
-        {/* Hat top highlight */}
-        <ellipse cx="32" cy="20" rx="12" ry="8" fill="white" opacity="0.3" />
-
-        {/* Elegant chef band with gradient */}
-        <path
-          d="M15 35C17 36 20 37 24 37H40C44 37 47 36 49 35C51 37 49 40 45 41H19C15 40 13 37 15 35Z"
-          fill="url(#bandGradient)"
+        {/* Clean chef band */}
+        <rect
+          x="18"
+          y="34"
+          width="28"
+          height="8"
+          fill="white"
           stroke="#FF5722"
-          strokeWidth="2"
-          strokeLinejoin="round"
+          strokeWidth="3"
+          rx="4"
         />
-
-        {/* Band highlight */}
-        <ellipse cx="32" cy="38" rx="18" ry="2" fill="white" opacity="0.4" />
-
-        {/* Subtle pleats as gentle curves */}
-        <path
-          d="M22 35C23 30 25 25 27 20"
-          stroke="#FF5722"
-          strokeWidth="0.5"
-          opacity="0.3"
-          strokeLinecap="round"
-        />
-        <path
-          d="M32 35C32 30 32 25 32 18"
-          stroke="#FF5722"
-          strokeWidth="0.5"
-          opacity="0.3"
-          strokeLinecap="round"
-        />
-        <path
-          d="M42 35C41 30 39 25 37 20"
-          stroke="#FF5722"
-          strokeWidth="0.5"
-          opacity="0.3"
-          strokeLinecap="round"
-        />
-
-        {/* Soft shadow */}
-        <ellipse cx="32" cy="43" rx="20" ry="2" fill="#FF5722" opacity="0.08" />
       </svg>
     </div>
   );
 };
 
-// Beautiful Chef Hat for Auth Screen
+// Line Art Chef Hat - Minimalist Outline
 export const AuthChef: React.FC<ChefLogoProps> = ({
   size = "md",
   className = "",
@@ -108,91 +68,43 @@ export const AuthChef: React.FC<ChefLogoProps> = ({
         xmlns="http://www.w3.org/2000/svg"
         className="w-full h-full"
       >
-        <defs>
-          <linearGradient
-            id="authHatGradient"
-            x1="0%"
-            y1="0%"
-            x2="100%"
-            y2="100%"
-          >
-            <stop offset="0%" stopColor="#ffffff" />
-            <stop offset="100%" stopColor="#f8f8f8" />
-          </linearGradient>
-          <radialGradient id="authBandGradient" cx="50%" cy="30%" r="70%">
-            <stop offset="0%" stopColor="#ffffff" />
-            <stop offset="100%" stopColor="#eeeeee" />
-          </radialGradient>
-        </defs>
-
-        {/* Elegant chef hat with smooth curves */}
+        {/* Outline only chef hat */}
         <path
-          d="M32 8C24 8 17 12 17 19C13 19 10 22 10 27C10 32 13 35 17 35C19 37 22 38 26 38H38C42 38 45 37 47 35C51 35 54 32 54 27C54 22 51 19 47 19C47 12 40 8 32 8Z"
-          fill="url(#authHatGradient)"
+          d="M32 10C25 10 20 14 20 19C17 19 14 22 14 26C14 30 17 33 20 33H44C47 33 50 30 50 26C50 22 47 19 44 19C44 14 39 10 32 10Z"
+          fill="none"
           stroke="#FF5722"
-          strokeWidth="2"
+          strokeWidth="3"
+          strokeLinecap="round"
           strokeLinejoin="round"
         />
 
-        {/* Top highlight for dimension */}
-        <ellipse cx="32" cy="22" rx="10" ry="6" fill="white" opacity="0.25" />
-
-        {/* Beautiful curved band */}
+        {/* Simple band outline */}
         <path
-          d="M17 36C19 37 22 38 26 38H38C42 38 45 37 47 36C49 38 47 41 43 42H21C17 41 15 38 17 36Z"
-          fill="url(#authBandGradient)"
+          d="M20 33C22 35 24 36 27 36H37C40 36 42 35 44 33C45 35 43 37 40 38H24C21 37 19 35 20 33Z"
+          fill="none"
           stroke="#FF5722"
-          strokeWidth="2"
+          strokeWidth="3"
+          strokeLinecap="round"
           strokeLinejoin="round"
         />
 
-        {/* Band detail line */}
-        <path
-          d="M20 39C24 40 28 40 32 40C36 40 40 40 44 39"
+        {/* Single center pleat line */}
+        <line
+          x1="32"
+          y1="33"
+          x2="32"
+          y2="16"
           stroke="#FF5722"
-          strokeWidth="0.5"
-          opacity="0.4"
+          strokeWidth="2"
           strokeLinecap="round"
-        />
-
-        {/* Refined pleats */}
-        <path
-          d="M24 36C25 31 27 26 29 21"
-          stroke="#FF5722"
-          strokeWidth="0.5"
-          opacity="0.25"
-          strokeLinecap="round"
-        />
-        <path
-          d="M32 36C32 31 32 26 32 20"
-          stroke="#FF5722"
-          strokeWidth="0.5"
-          opacity="0.25"
-          strokeLinecap="round"
-        />
-        <path
-          d="M40 36C39 31 37 26 35 21"
-          stroke="#FF5722"
-          strokeWidth="0.5"
-          opacity="0.25"
-          strokeLinecap="round"
-        />
-
-        {/* Soft base shadow */}
-        <ellipse
-          cx="32"
-          cy="44"
-          rx="18"
-          ry="1.5"
-          fill="#FF5722"
-          opacity="0.06"
+          opacity="0.6"
         />
       </svg>
     </div>
   );
 };
 
-// Beautiful Chef Hat for Preferences Screen
+// Geometric Chef Hat - Modern Angular Design
 export const PreferencesChef: React.FC<ChefLogoProps> = ({
   size = "md",
   className = "",
@@ -206,105 +118,59 @@ export const PreferencesChef: React.FC<ChefLogoProps> = ({
   return (
     <div className={`${sizeClasses[size]} ${className}`}>
       <svg
-        viewBox="0 0 64 70"
+        viewBox="0 0 64 64"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="w-full h-full"
       >
-        <defs>
-          <linearGradient
-            id="prefHatGradient"
-            x1="0%"
-            y1="0%"
-            x2="100%"
-            y2="100%"
-          >
-            <stop offset="0%" stopColor="#ffffff" />
-            <stop offset="50%" stopColor="#fafafa" />
-            <stop offset="100%" stopColor="#f0f0f0" />
-          </linearGradient>
-          <linearGradient
-            id="prefBandGradient"
-            x1="0%"
-            y1="0%"
-            x2="100%"
-            y2="100%"
-          >
-            <stop offset="0%" stopColor="#ffffff" />
-            <stop offset="100%" stopColor="#e8e8e8" />
-          </linearGradient>
-        </defs>
-
-        {/* Tall elegant chef hat */}
+        {/* Geometric chef hat - angular design */}
         <path
-          d="M32 6C22 6 14 11 14 18C10 18 6 22 6 28C6 34 10 38 14 38C16 40 19 41 23 41H41C45 41 48 40 50 38C54 38 58 34 58 28C58 22 54 18 50 18C50 11 42 6 32 6Z"
-          fill="url(#prefHatGradient)"
+          d="M32 12L42 20L48 28L46 32H18L16 28L22 20L32 12Z"
+          fill="white"
           stroke="#FF5722"
-          strokeWidth="2"
+          strokeWidth="3"
           strokeLinejoin="round"
         />
 
-        {/* Multiple hat highlights for dimension */}
-        <ellipse cx="32" cy="20" rx="11" ry="7" fill="white" opacity="0.2" />
-        <ellipse cx="28" cy="16" rx="6" ry="4" fill="white" opacity="0.15" />
+        {/* Geometric chef band */}
+        <rect
+          x="18"
+          y="32"
+          width="28"
+          height="8"
+          fill="white"
+          stroke="#FF5722"
+          strokeWidth="3"
+          rx="0"
+        />
 
-        {/* Sophisticated chef band */}
-        <path
-          d="M14 39C16 40 19 41 23 41H41C45 41 48 40 50 39C52 41 50 44 46 45H18C14 44 12 41 14 39Z"
-          fill="url(#prefBandGradient)"
+        {/* Modern accent lines */}
+        <line
+          x1="26"
+          y1="32"
+          x2="28"
+          y2="18"
           stroke="#FF5722"
           strokeWidth="2"
-          strokeLinejoin="round"
+          opacity="0.4"
         />
-
-        {/* Band decorative elements */}
-        <ellipse cx="32" cy="42" rx="20" ry="2" fill="white" opacity="0.3" />
-        <circle cx="24" cy="42" r="1" fill="#FF5722" opacity="0.2" />
-        <circle cx="32" cy="42" r="1" fill="#FF5722" opacity="0.2" />
-        <circle cx="40" cy="42" r="1" fill="#FF5722" opacity="0.2" />
-
-        {/* Elegant curved pleats */}
-        <path
-          d="M20 39C21 34 23 29 25 24C26 21 27 18 28 16"
+        <line
+          x1="32"
+          y1="32"
+          x2="32"
+          y2="14"
           stroke="#FF5722"
-          strokeWidth="0.5"
-          opacity="0.2"
-          strokeLinecap="round"
-          fill="none"
+          strokeWidth="2"
+          opacity="0.4"
         />
-        <path
-          d="M28 39C29 34 31 29 32 24C32 21 32 18 32 14"
+        <line
+          x1="38"
+          y1="32"
+          x2="36"
+          y2="18"
           stroke="#FF5722"
-          strokeWidth="0.5"
-          opacity="0.2"
-          strokeLinecap="round"
-          fill="none"
-        />
-        <path
-          d="M36 39C37 34 38 29 39 24C38 21 37 18 36 16"
-          stroke="#FF5722"
-          strokeWidth="0.5"
-          opacity="0.2"
-          strokeLinecap="round"
-          fill="none"
-        />
-        <path
-          d="M44 39C43 34 41 29 39 24C38 21 37 18 36 16"
-          stroke="#FF5722"
-          strokeWidth="0.5"
-          opacity="0.2"
-          strokeLinecap="round"
-          fill="none"
-        />
-
-        {/* Refined shadow */}
-        <ellipse
-          cx="32"
-          cy="47"
-          rx="22"
-          ry="1.5"
-          fill="#FF5722"
-          opacity="0.05"
+          strokeWidth="2"
+          opacity="0.4"
         />
       </svg>
     </div>
