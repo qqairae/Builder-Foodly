@@ -44,8 +44,8 @@ export default function Preferences() {
     <div className="min-h-screen bg-gradient-to-b from-foodly-orange to-foodly-red flex flex-col items-center px-6 py-8">
       <div className="w-full max-w-sm">
         {/* Header */}
-        <div className="flex items-center justify-center mb-8">
-          <PreferencesChef size="md" className="mr-4" />
+        <div className="flex flex-col items-center mb-8">
+          <PreferencesChef size="lg" className="mb-4" />
           <h1
             className="text-white text-4xl font-bold"
             style={{

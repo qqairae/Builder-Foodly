@@ -44,11 +44,9 @@ const Auth: React.FC = () => {
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
       <div className="w-full max-w-sm mx-auto">
         {/* Logo */}
-        <div className="flex justify-center mb-8">
-          <div className="flex flex-col items-center">
-            <AuthChef size="lg" />
-            <div className="w-4 h-3 bg-foodly-red rounded-full mt-2"></div>
-          </div>
+        <div className="flex flex-col items-center mb-8">
+          <AuthChef size="lg" />
+          <div className="w-4 h-3 bg-foodly-red rounded-full mt-2"></div>
         </div>
 
         {/* Auth Form */}

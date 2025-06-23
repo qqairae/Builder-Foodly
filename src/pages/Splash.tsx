@@ -15,15 +15,11 @@ const Splash: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-b from-foodly-orange via-foodly-orange to-foodly-orange-light flex items-center justify-center p-4">
       <div className="w-full max-w-sm mx-auto">
         <div className="bg-foodly-orange rounded-3xl p-8 shadow-2xl">
-          {/* Top Logo */}
-          <div className="flex justify-center mb-8">
-            <SplashChef size="lg" className="text-white" />
-          </div>
-
-          {/* Title */}
-          <div className="text-center mb-4">
+          {/* Header with Logo and Title */}
+          <div className="flex flex-col items-center mb-8">
+            <SplashChef size="lg" className="mb-4" />
             <h1
-              className="text-5xl font-bold text-white mb-2"
+              className="text-5xl font-bold text-white"
               style={{
                 fontFamily: "Comic Sans MS, cursive, system-ui",
                 letterSpacing: "2px",
@@ -32,6 +28,10 @@ const Splash: React.FC = () => {
             >
               Foodly
             </h1>
+          </div>
+
+          {/* Subtitle */}
+          <div className="text-center mb-4">
             <p className="text-white/90 text-lg font-medium">
               Find your food with Food Smart
             </p>
