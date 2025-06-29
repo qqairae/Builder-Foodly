@@ -76,7 +76,11 @@ export default function Search() {
         {/* Results Grid */}
         <div className="grid grid-cols-2 gap-4">
           {searchResults.map((food) => (
-            <div key={food.id} className="bg-white rounded-lg p-4 shadow-sm">
+            <div
+              key={food.id}
+              className="bg-white rounded-lg p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow duration-200 active:scale-95 transform"
+              onClick={() => navigate(`/food/${food.id}`)}
+            >
               <div className="aspect-square mb-3">
                 <img
                   src={food.image}
