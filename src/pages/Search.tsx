@@ -1,30 +1,50 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, Search as SearchIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { FoodCard } from "@/components/FoodCard";
 import { foodItems } from "@/data/mockData";
 
 export default function Search() {
   const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [searchResults, setSearchResults] = useState(foodItems);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const query = searchParams.get("q") || "";
 
   useEffect(() => {
-    if (query) {
+    // Initialize search query from URL params
+    setSearchQuery(query);
+  }, [query]);
+
+  useEffect(() => {
+    // Filter results based on current search query
+    if (searchQuery.trim()) {
       const filtered = foodItems.filter(
         (food) =>
-          food.name.toLowerCase().includes(query.toLowerCase()) ||
-          food.category.toLowerCase().includes(query.toLowerCase()) ||
-          food.restaurant.toLowerCase().includes(query.toLowerCase()),
+          food.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          food.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          food.restaurant.toLowerCase().includes(searchQuery.toLowerCase()),
       );
       setSearchResults(filtered);
     } else {
       setSearchResults(foodItems);
     }
-  }, [query]);
+  }, [searchQuery]);
+
+  const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newQuery = e.target.value;
+    setSearchQuery(newQuery);
+
+    // Update URL params
+    if (newQuery.trim()) {
+      setSearchParams({ q: newQuery });
+    } else {
+      setSearchParams({});
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -34,7 +54,16 @@ export default function Search() {
           <Button variant="ghost" size="icon" onClick={() => navigate(-1)}>
             <ChevronLeft className="h-6 w-6" />
           </Button>
-          <span className="text-gray-600">Search Places</span>
+          <div className="flex-1 relative">
+            <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+            <Input
+              type="text"
+              placeholder="Search for food, restaurants..."
+              value={searchQuery}
+              onChange={handleSearchChange}
+              className="pl-10 pr-4 py-2 w-full border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-foodly-orange focus:border-transparent"
+            />
+          </div>
         </div>
       </div>
 
