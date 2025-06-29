@@ -68,7 +68,14 @@ export default function Home() {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => {
+                setActiveCategory(category);
+                // Navigate to category pages
+                if (category === "Foods") navigate("/foods");
+                else if (category === "Drinks") navigate("/drinks");
+                else if (category === "Snacks") navigate("/snacks");
+                else if (category === "Sauces") navigate("/search?q=sauce");
+              }}
               className={`text-sm font-medium pb-2 border-b-2 transition-colors ${
                 activeCategory === category
                   ? "text-foodly-orange border-foodly-orange"

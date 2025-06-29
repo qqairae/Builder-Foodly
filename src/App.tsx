@@ -10,6 +10,9 @@ import Auth from "@/pages/Auth";
 import Preferences from "@/pages/Preferences";
 import Home from "@/pages/Home";
 import Search from "@/pages/Search";
+import Foods from "@/pages/Foods";
+import Drinks from "@/pages/Drinks";
+import Snacks from "@/pages/Snacks";
 import FoodDetail from "@/pages/FoodDetail";
 import History from "@/pages/History";
 import Profile from "@/pages/Profile";
@@ -33,6 +36,9 @@ const App = () => (
               <Route path="/preferences" element={<Preferences />} />
               <Route path="/home" element={<Home />} />
               <Route path="/search" element={<Search />} />
+              <Route path="/foods" element={<Foods />} />
+              <Route path="/drinks" element={<Drinks />} />
+              <Route path="/snacks" element={<Snacks />} />
               <Route path="/food/:id" element={<FoodDetail />} />
               <Route path="/history" element={<History />} />
               <Route path="/profile" element={<Profile />} />
