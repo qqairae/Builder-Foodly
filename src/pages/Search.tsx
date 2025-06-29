@@ -51,7 +51,7 @@ export default function Search() {
       {/* Header */}
       <div className="bg-white px-4 py-4 shadow-sm">
         <div className="flex items-center space-x-4 mb-4">
-          <Button variant="ghost" size="icon" onClick={() => navigate(-1)}>
+          <Button variant="ghost" size="icon" onClick={() => navigate("/home")}>
             <ChevronLeft className="h-6 w-6" />
           </Button>
           <div className="flex-1 relative">
