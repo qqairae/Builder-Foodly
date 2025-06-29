@@ -5,28 +5,27 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { foodItems } from "@/data/mockData";
 
-export default function Foods() {
+export default function Sauces() {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
-  const [filteredFoods, setFilteredFoods] = useState(foodItems);
+  const [filteredSauces, setFilteredSauces] = useState<typeof foodItems>([]);
 
-  // Filter foods (exclude drinks, snacks, desserts, and sauces)
-  const excludeCategories = ["drinks", "snacks", "desserts", "sauces"];
-  const foodsOnly = foodItems.filter(
-    (item) => !excludeCategories.includes(item.category.toLowerCase()),
+  // Filter sauces by category
+  const saucesOnly = foodItems.filter(
+    (item) => item.category.toLowerCase() === "sauces",
   );
 
   useEffect(() => {
     if (searchQuery.trim()) {
-      const filtered = foodsOnly.filter(
-        (food) =>
-          food.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          food.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          food.restaurant.toLowerCase().includes(searchQuery.toLowerCase()),
+      const filtered = saucesOnly.filter(
+        (sauce) =>
+          sauce.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          sauce.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          sauce.restaurant.toLowerCase().includes(searchQuery.toLowerCase()),
       );
-      setFilteredFoods(filtered);
+      setFilteredSauces(filtered);
     } else {
-      setFilteredFoods(foodsOnly);
+      setFilteredSauces(saucesOnly);
     }
   }, [searchQuery]);
 
@@ -46,7 +45,7 @@ export default function Foods() {
             <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
             <Input
               type="text"
-              placeholder="Search for foods..."
+              placeholder="Search for sauces..."
               value={searchQuery}
               onChange={handleSearchChange}
               className="pl-10 pr-4 py-2 w-full border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-foodly-orange focus:border-transparent"
@@ -58,43 +57,48 @@ export default function Foods() {
       {/* Results */}
       <div className="px-4 py-6">
         <h2 className="text-xl font-semibold text-center text-gray-900 mb-6">
-          Foods - Found {filteredFoods.length} results
+          Sauces - Found {filteredSauces.length} results
         </h2>
 
         {/* Results Grid */}
         <div className="grid grid-cols-2 gap-4">
-          {filteredFoods.map((food) => (
+          {filteredSauces.map((sauce) => (
             <div
-              key={food.id}
+              key={sauce.id}
               className="bg-white rounded-lg p-4 shadow-sm cursor-pointer hover:shadow-md transition-shadow duration-200 active:scale-95 transform"
-              onClick={() => navigate(`/food/${food.id}`)}
+              onClick={() => navigate(`/food/${sauce.id}`)}
             >
               <div className="aspect-square mb-3">
                 <img
-                  src={food.image}
-                  alt={food.name}
+                  src={sauce.image}
+                  alt={sauce.name}
                   className="w-full h-full object-cover rounded-lg"
                 />
               </div>
 
               <div className="text-center">
                 <h3 className="font-semibold text-gray-900 mb-1">
-                  {food.restaurant}
+                  {sauce.restaurant}
                 </h3>
-                <p className="text-sm text-gray-600 mb-2">{food.name}</p>
+                <p className="text-sm text-gray-600 mb-2">{sauce.name}</p>
 
                 <div className="flex items-center justify-center space-x-1">
                   <span className="text-yellow-400">⭐</span>
-                  <span className="text-sm font-medium">{food.rating}</span>
+                  <span className="text-sm font-medium">{sauce.rating}</span>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {filteredFoods.length === 0 && (
+        {filteredSauces.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-gray-500">No foods found</p>
+            <p className="text-gray-500">
+              No sauces found matching your search
+            </p>
+            <p className="text-gray-400 text-sm mt-2">
+              Try searching for BBQ, garlic, or other sauce types
+            </p>
           </div>
         )}
       </div>

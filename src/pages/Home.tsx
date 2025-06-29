@@ -74,7 +74,7 @@ export default function Home() {
                 if (category === "Foods") navigate("/foods");
                 else if (category === "Drinks") navigate("/drinks");
                 else if (category === "Snacks") navigate("/snacks");
-                else if (category === "Sauces") navigate("/search?q=sauce");
+                else if (category === "Sauces") navigate("/sauces");
               }}
               className={`text-sm font-medium pb-2 border-b-2 transition-colors ${
                 activeCategory === category

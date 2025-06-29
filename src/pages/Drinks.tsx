@@ -10,22 +10,9 @@ export default function Drinks() {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredDrinks, setFilteredDrinks] = useState<typeof foodItems>([]);
 
-  // Filter drinks by drink-related categories and names
-  const drinkCategories = [
-    "drink",
-    "beverage",
-    "juice",
-    "coffee",
-    "tea",
-    "soda",
-    "smoothie",
-  ];
-  const drinksOnly = foodItems.filter((item) =>
-    drinkCategories.some(
-      (category) =>
-        item.category.toLowerCase().includes(category.toLowerCase()) ||
-        item.name.toLowerCase().includes(category.toLowerCase()),
-    ),
+  // Filter drinks by category
+  const drinksOnly = foodItems.filter(
+    (item) => item.category.toLowerCase() === "drinks",
   );
 
   useEffect(() => {

@@ -13,6 +13,7 @@ import Search from "@/pages/Search";
 import Foods from "@/pages/Foods";
 import Drinks from "@/pages/Drinks";
 import Snacks from "@/pages/Snacks";
+import Sauces from "@/pages/Sauces";
 import FoodDetail from "@/pages/FoodDetail";
 import History from "@/pages/History";
 import Profile from "@/pages/Profile";
@@ -39,6 +40,7 @@ const App = () => (
               <Route path="/foods" element={<Foods />} />
               <Route path="/drinks" element={<Drinks />} />
               <Route path="/snacks" element={<Snacks />} />
+              <Route path="/sauces" element={<Sauces />} />
               <Route path="/food/:id" element={<FoodDetail />} />
               <Route path="/history" element={<History />} />
               <Route path="/profile" element={<Profile />} />

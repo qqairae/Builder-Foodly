@@ -10,23 +10,11 @@ export default function Snacks() {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredSnacks, setFilteredSnacks] = useState<typeof foodItems>([]);
 
-  // Filter snacks by snack-related categories and names
-  const snackCategories = [
-    "snack",
-    "dessert",
-    "candy",
-    "chips",
-    "cookie",
-    "cake",
-    "pastry",
-    "sweet",
-  ];
-  const snacksOnly = foodItems.filter((item) =>
-    snackCategories.some(
-      (category) =>
-        item.category.toLowerCase().includes(category.toLowerCase()) ||
-        item.name.toLowerCase().includes(category.toLowerCase()),
-    ),
+  // Filter snacks and desserts by category
+  const snacksOnly = foodItems.filter(
+    (item) =>
+      item.category.toLowerCase() === "snacks" ||
+      item.category.toLowerCase() === "desserts",
   );
 
   useEffect(() => {
